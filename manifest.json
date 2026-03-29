@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Not Alma Uzantısı",
+  "version": "1.0",
+  "description": "Basit not alma uzantısı",
+  "action" : {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"]
+}

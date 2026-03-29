@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Not Alma Uzantısı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2> Not Alma V1.0</h2>
 
-    <input type="text" id="header" placeholder="Add header">
-    <textarea id='contents' placeholder="Add contents"></textarea>
-    <button id="addBtn">Notu Ekle</button>
-    <h3>Kaydedilen Notlar</h3>
-    <ul id="noteList"></ul>
+    <div id="container">
+        <div id="headerContainer">
+            <div class="logo-wrap">
+                <span class="logo-icon">
+                    WhatNotes?
+                </span>
+                <div>
+                    <h2>notAL</h2>
+                    <span class="version-tag">v1.1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" id="headerAddContainer">
+            <label class="section-label">Yeni Konu</label>
+            <div class="input-row">
+                <input type="text" id="newArea" placeholder="Konu adini giriniz..,">
+                <button id="addHeaderAreaBtn">
+                    <span>+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="section-card" id="contentArea">
+            <label class="section-label">Not Ekle</label>
+            <select id="contentAreaSelect">
+                <option value="">--Konu Seçin --</option>
+            </select>
+            <input type="text" id="contentAreaHeader" placeholder="Başlık">
+            <textarea id="contents" placeholder="Notunuzu giriniz..." rows="4"></textarea>
+            <button id="addBtn" class="primary-btn">Not Kaydet</button>
+        </div>
+
+        <div class="section-card">
+            <label class="section-label">
+                Kaydedilen Notlar
+            </label>
+            <ul id="noteList"></ul>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>

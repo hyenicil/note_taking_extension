@@ -69,6 +69,25 @@ document.addEventListener("DOMContentLoaded", ()=>{
         loadAreas();
     });
 
+    chrome.storage.local.get("selectedText",(data) => {
+        if (data.selectedText){
+            contentsInput.value = data.selectedText;
+        }
+    });
+
+    chrome.storage.onChanged.addListener((changes, area) => {
+        if(area === "local") {
+
+            if (changes.selectedText) {
+                contentsInput.value = changes.selectedText.newValue;
+            }
+
+            if (changes.pageTitle) {
+                headerInput.value = changes.pageTitle.newValue;
+            }
+        }
+    });
+
     areaSelect.addEventListener("change", listing);
     loadAreas();
     listing();

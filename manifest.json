@@ -3,8 +3,18 @@
   "name": "Not Alma Uzantısı",
   "version": "1.0",
   "description": "Basit not alma uzantısı",
-  "action" : {
-    "default_popup": "popup.html"
+  "permissions": ["sidePanel", "storage"],
+  "action": {},
+  "side_panel" : {
+    "default_path": "popup.html"
   },
-  "permissions": ["storage"]
+  "background" : {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }

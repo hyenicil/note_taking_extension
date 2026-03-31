@@ -276,6 +276,20 @@ button {
     50%       { filter: drop-shadow(0 0 14px var(--accent-glow)); }
 }
 
+.note-delete, .note-download {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+}
+
+.note-delete:hover, .note-download:hover {
+    opacity: 1;
+}
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
